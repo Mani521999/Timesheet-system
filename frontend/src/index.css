@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-slate-900 bg-slate-50 font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 
+           transition-all duration-200 shadow-sm active:scale-95 flex items-center gap-2;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-lg 
+           hover:bg-slate-50 transition-all duration-200 shadow-sm active:scale-95 flex items-center gap-2;
+  }
+
+  .card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 bg-white border border-slate-300 rounded-lg focus:ring-2 
+           focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all;
+  }
+}
+
+/* Enhanced Table Scrollbar */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+.overflow-x-auto::-webkit-scrollbar-track {
+  @apply bg-slate-100 rounded-full;
+}
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full hover:bg-slate-400 transition-colors;
+}
